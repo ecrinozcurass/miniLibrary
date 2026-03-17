@@ -1,10 +1,10 @@
-public class miniLibrary {
+public class Book {
     private String title;
     private String author;
     private int pageCount;
     private boolean available;
 
-    public miniLibrary(String title, String author, int pageCount, boolean available){
+    public Book(String title, String author, int pageCount, boolean available){
     }
     public void printInfo() {
         System.out.println("Title: "+ title);
