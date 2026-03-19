@@ -5,21 +5,37 @@ public class Book {
     private boolean available;
 
     public Book(String title, String author, int pageCount, boolean available){
+        this.title = title;
+        this.author = author;
+        this.pageCount = pageCount;
+        this.available = available;
     }
+
     public void printInfo() {
-        System.out.println("Title: "+ title);
-        System.out.println("Author: "+ author);
-        System.out.println("Pages :" + pageCount);
-        System.out.println("Avaiable :" + available);
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Pages: " + pageCount);
+        System.out.println("Available: " + available);
+        System.out.println("-------------------");
     }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
     public void borrow() {
-        if (available){
+        if (available) {
             available = false;
-            System.out.println(title + "borrowed.");
+            System.out.println(title + " borrowed.");
         } else {
             System.out.println(title + " is already borrowed.");
         }
     }
+
     public void returnBook() {
         available = true;
         System.out.println(title + " returned.");
